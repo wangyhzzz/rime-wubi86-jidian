@@ -14,7 +14,7 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 0
+    reset: 1
     states: [ 中文, 英文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
@@ -49,7 +49,7 @@ engine:
 
 speller:
   max_code_length: 4                    # 四码上屏
-  auto_select: true                     # 自动上屏
+  auto_select: false                     # 自动上屏
 
 translator:
   dictionary: wubi86_jidian             # 翻译器将调取此字典文件
@@ -59,9 +59,9 @@ translator:
   enable_user_dict: false               # 是否开启用户词典（用户词典记录动态字词频，用户词）
   enable_encoder: false
   preedit_format:                       # 上屏码自定义
-#    - xform/.+//
+   - xform/.+//
   comment_format:                       # 提示码自定义
-    - xform/.+//                        # 配置：消除所有候选词后的提示码
+    # - xform/.+//                        # 配置：消除所有候选词后的提示码
 
 
 reverse_lookup:
